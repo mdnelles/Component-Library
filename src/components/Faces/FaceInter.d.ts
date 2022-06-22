@@ -1,21 +1,12 @@
 export interface FaceProps {
-    bfv?: string | boolean;
-    bgc?: string | boolean;
-    border?: string | boolean;
     children?: any;
-    faceType?: any;
-    globalStyles?: any;
-    fontFamily?: string | any;
     depth?: number | any;
+    faceType?: any;
+    custom?: any;
+    global?: any;
     height?: number | string;
     id?: string | number | boolean;
-    indivStyles?: object | any;
-    left?: number;
-    margin?: number | string;
-    opac?: number | string | boolean | undefined;
-    padding?: number | string;
-    position?: number;
-    top?: number;
+    styles?: object | any;
     tranz: any;
     width?: number | string;
 }
@@ -39,7 +30,7 @@ export interface CuboidProps {
         | undefined;
     children: any;
     depth?: number;
-    globalStyles?: { border?: string; bgc?: string; opac?: number | string } | any;
+    global?: { border?: string; bgc?: string; opac?: number | string } | any;
     faces?:
         | {
               front: boolean;
@@ -52,17 +43,10 @@ export interface CuboidProps {
         | undefined;
 
     height?: number | string;
-    indivStyles?: object | string | undefined;
+    custom?: object | string | undefined;
     perspectiveOrigin?: string | undefined;
     tranz?: number | undefined;
+    txt?: string | any;
     width?: number;
     zIndex?: number | undefined;
-}
-
-export interface VarsProps {
-    bfv?: string | any;
-    bgc?: string | any;
-    border?: string | any;
-    opac?: string | any;
-    fontFamily?: string | any;
 }

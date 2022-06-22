@@ -1,10 +1,11 @@
 {
-    "name": "anim-3d-objs",
+    "name": "anim-3d-obj",
     "repository": {
         "type": "git",
-        "url": "https://github.com/joeythelantern/Component-Library.git"
+        "url": "https://github.com/mdnelles/anim-3d-objs-launcher"
     },
-    "version": "0.0.9",
+    "homepage": "https://github.com/mdnelles/anim-3d-objs",
+    "version": "1.0.9",
     "description": "A component library for getting people started with easy to re-use components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -16,20 +17,20 @@
         "build:esm": "tsc",
         "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
     },
-    "author": "The Nerdy Canuck",
+    "author": "mnelles",
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^17.0.21",
         "@types/react": "^17.0.37",
         "@types/react-dom": "^17.0.11",
         "@types/styled-components": "^5.1.25",
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "typescript": "^4.5.2"
     },
     "peerDependencies": {
-        "react": "^18.1.0",
-        "react-dom": "^18.1.0"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
     },
     "dependencies": {
         "styled-components": "^5.3.5"

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
+import React from 'react';
 import { AnimWrap } from './styles/AnimWrap';
 import { SceneStyle } from './styles/Scene';
 import { CuboidProps } from './Faces/FaceInter';
 import Face from './Faces/Face';
-import React from 'react';
 
 const CuboidWrapper = styled.div`
     width: 100%;
@@ -12,20 +12,10 @@ const CuboidWrapper = styled.div`
     transform-style: preserve-3d;
 `;
 
-export const Cuboid = (props: CuboidProps): any => {
-    let color = '#eee',
-        fontWeight: number | string = 800,
-        fontFamily: string = 'helvetica',
-        textShadow: string = '1px 1px #555',
-        lineHeight: number = 1.2,
-        fontSize: number | string = 20,
-        textAlign: string | any = 'center';
+const Cuboid = (props: CuboidProps): any => {
+    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, global, custom, tranz = (+height / 2) | 0, perspectiveOrigin, txt, zIndex } = props;
 
-    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, globalStyles, indivStyles, tranz = (+height / 2) | 0, perspectiveOrigin, zIndex } = props;
-
-    const buildFace = (faceType: any, child: any): any => {
-        //const { faceType, child } = props;
-
+    const buildFace = (faceType: any): any => {
         return (
             <Face
                 width={width}
@@ -34,24 +24,10 @@ export const Cuboid = (props: CuboidProps): any => {
                 faceType={faceType}
                 id={faceType}
                 tranz={tranz}
-                // if specified opac / bgc / border will over-ride globalStyles
-                globalStyles={globalStyles}
-                indivStyles={indivStyles}
-            >
-                <div
-                    style={{
-                        color,
-                        fontWeight,
-                        textShadow,
-                        lineHeight,
-                        fontSize,
-                        fontFamily,
-                        textAlign
-                    }}
-                >
-                    {child}
-                </div>
-            </Face>
+                // if specified opac / bgc / border will over-ride global
+                global={global}
+                custom={custom}
+            />
         );
     };
 
@@ -74,15 +50,17 @@ export const Cuboid = (props: CuboidProps): any => {
                     animDirection={animSpecs.anim2direction}
                 >
                     <CuboidWrapper>
-                        {!!faces && !!faces.front ? buildFace('front', 'FRONT') : null}
-                        {!!faces && !!faces.right ? buildFace('right', 'RIGHT') : null}
-                        {!!faces && !!faces.back ? buildFace('back', 'BACK') : null}
-                        {!!faces && !!faces.left ? buildFace('left', 'LEFT') : null}
-                        {!!faces && !!faces.top ? buildFace('top', 'TOP') : null}
-                        {!!faces && !!faces.bottom ? buildFace('bottom', 'BOTTOM') : null}
+                        {!!faces && !!faces.front ? buildFace('front') : null}
+                        {!!faces && !!faces.right ? buildFace('right') : null}
+                        {!!faces && !!faces.back ? buildFace('back') : null}
+                        {!!faces && !!faces.left ? buildFace('left') : null}
+                        {!!faces && !!faces.top ? buildFace('top') : null}
+                        {!!faces && !!faces.bottom ? buildFace('bottom') : null}
                     </CuboidWrapper>
                 </AnimWrap>
             </AnimWrap>
         </SceneStyle>
     );
 };
+
+export default Cuboid;
