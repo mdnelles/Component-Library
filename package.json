@@ -5,7 +5,7 @@
         "url": "https://github.com/mdnelles/anim-3d-objs-launcher"
     },
     "homepage": "https://github.com/mdnelles/anim-3d-objs",
-    "version": "1.0.9",
+    "version": "1.0.13",
     "description": "A component library for getting people started with easy to re-use components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",

@@ -13,7 +13,7 @@ const CuboidWrapper = styled.div`
 `;
 
 const Cuboid = (props: CuboidProps): any => {
-    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, global, custom, tranz = (+height / 2) | 0, perspectiveOrigin, txt, zIndex } = props;
+    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, global, custom, tranz = (+height / 2) | 0, perspectiveOrigin, zIndex } = props;
 
     const buildFace = (faceType: any): any => {
         return (

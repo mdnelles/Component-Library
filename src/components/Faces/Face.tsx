@@ -59,7 +59,7 @@ const Face = (props: FaceProps): any => {
         height: ${height}px;
         ${transform};
     `;
-    return <Specs>{'body'}</Specs>;
+    return <Specs>{body}</Specs>;
 };
 
 export default Face;
