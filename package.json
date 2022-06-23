@@ -2,10 +2,10 @@
     "name": "anim-3d-obj",
     "repository": {
         "type": "git",
-        "url": "https://github.com/mdnelles/anim-3d-objs-launcher"
+        "url": "https://github.com/mdnelles/Component-Libraryt"
     },
-    "homepage": "https://github.com/mdnelles/anim-3d-objs",
-    "version": "1.0.13",
+    "homepage": "https://github.com/mdnelles/anim-3d-objs-launchers",
+    "version": "1.0.19",
     "description": "A component library for getting people started with easy to re-use components for everyday projects.",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
@@ -17,7 +17,7 @@
         "build:esm": "tsc",
         "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
     },
-    "author": "mnelles",
+    "author": "mdnelles",
     "license": "MIT",
     "devDependencies": {
         "@types/node": "^17.0.21",

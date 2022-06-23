@@ -6,8 +6,8 @@ const Face = (props: FaceProps): any => {
     let { depth = 10, faceType, global = {}, height = 10, custom = false, tranz = 80, width = 100 } = props;
 
     let transform;
-    const styles = !!custom[faceType].css ? custom[faceType].css : global.css;
-    const body = !!custom[faceType].body ? custom[faceType].body : global.body;
+    const styles = !!custom[faceType] && !!custom[faceType].css ? custom[faceType].css : global.css;
+    const body = !!custom[faceType] && !!custom[faceType].body ? custom[faceType].body : global.body;
 
     if (faceType === 'bottom') {
         tranz = +height - +depth / 2;

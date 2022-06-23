@@ -12,23 +12,11 @@ const CuboidWrapper = styled.div`
     transform-style: preserve-3d;
 `;
 
-const Cuboid = (props: CuboidProps): any => {
-    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, global, custom, tranz = (+height / 2) | 0, perspectiveOrigin, zIndex } = props;
+export const Cuboid = (props: CuboidProps): any => {
+    let { animSpecs = {}, width = 5, height = 5, depth = 5, faces, global = {}, custom = {}, tranz = (+height / 2) | 0, perspectiveOrigin, zIndex } = props;
 
     const buildFace = (faceType: any): any => {
-        return (
-            <Face
-                width={width}
-                height={height}
-                depth={depth}
-                faceType={faceType}
-                id={faceType}
-                tranz={tranz}
-                // if specified opac / bgc / border will over-ride global
-                global={global}
-                custom={custom}
-            />
-        );
+        return <Face width={width} height={height} depth={depth} faceType={faceType} id={faceType} tranz={tranz} global={global} custom={custom} />;
     };
 
     return (
@@ -62,5 +50,3 @@ const Cuboid = (props: CuboidProps): any => {
         </SceneStyle>
     );
 };
-
-export default Cuboid;
