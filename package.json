@@ -34,5 +34,14 @@
     },
     "dependencies": {
         "styled-components": "^5.3.5"
-    }
+    },
+    "keywords": [
+        "React",
+        "CSS",
+        "style",
+        "animation",
+        "cube",
+        "cuboid",
+        "3d"
+    ]
 }
