@@ -1,10 +1,7 @@
-
 # React Typescript Cuboid Builder
 
 This project allows a user to create Cuboids of any size simply by entering a set of parameters.  
 The program does the leg work with regard to calculating translationZ depth and config on the fly.
-
-
 
 ## Deployment
 
@@ -17,6 +14,7 @@ npm run start
 ```
 
 ## Examples
+
 All sided simple https://codesandbox.io/s/anim-3d-obj-all-sides-simple-sdy1q0
 
 Two sided simple https://codesandbox.io/s/anim-3d-obj-2-sides-simple-9wognm
@@ -27,8 +25,7 @@ speed wobble(y) 3 sides https://codesandbox.io/s/anim-3d-obj-3-sides-wobble-y-ax
 
 ## Authors
 
-- [@mdnelles](https://github.com/mdnelles)
-
+-   [@mdnelles](https://github.com/mdnelles)
 
 ## Demo
 
@@ -65,7 +62,8 @@ const indivStyles: object = {
    };
 ```
 
-and 
+and
+
 ```
          <Cuboid
             width={260}
@@ -86,8 +84,8 @@ will produce the following
 
 ![Logo](https://raw.githubusercontent.com/mdnelles/objs-local/main/img.png?token=GHSAT0AAAAAABQVNJ4VATWQM4SI3LXSTDZWYVDOL7Q)
 
-##Face Format
-for things like `background-image: url("myImg.png");` they can be done in `moreStyles` argument.
+##Face Format for things like `background-image: url("myImg.png");` they can be done in `moreStyles` argument.
+
 ```
    const Specs: any = styled.div`
       opacity: ${!!opac ? opac : globalStyles.opac};
@@ -106,3 +104,7 @@ for things like `background-image: url("myImg.png");` they can be done in `moreS
       ${moreStyles}
    `;
 ```
+
+## keywords
+
+React CSS style animation cube cuboid 3d
