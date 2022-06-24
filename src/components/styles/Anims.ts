@@ -180,6 +180,86 @@ export const allAnims = (props: AllAnimsProps) => {
        transform: rotateY(-360deg);
    }`;
 
+    /* ============================= floating */
+    const floatX = keyframes`
+   0% { -webkit-transform: translate(0,  0px); -ms-transform: translate(0,  0px); transform: translate(0,  0px); }
+   50%  { -webkit-transform: translate(0, 15px); -ms-transform: translate(0, 15px); transform: translate(0, 15px); }
+   100%   { -webkit-transform: translate(0, -0px); -ms-transform: translate(0, -0px); transform: translate(0, -0px); }`;
+
+    const floatShadow = keyframes`
+        0% {
+            -webkit-box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            -webkit-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                    transform: translateY(0px);
+        }
+        50% {
+            -webkit-box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+                    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            -webkit-transform: translateY(-20px);
+                -ms-transform: translateY(-20px);
+                    transform: translateY(-20px);
+        }
+        100% {
+            -webkit-box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            -webkit-transform: translateY(0px);
+                -ms-transform: translateY(0px);
+                    transform: translateY(0px);
+        }`;
+
+    const pulseSM = keyframes`
+   0% {
+    -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
+    }
+    70% {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);
+    }
+    100% {
+        -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+                transform: scale(0.9);
+    }`;
+
+    const pulseMD = keyframes`
+    0% {
+     -webkit-transform: scale(0.7);
+         -ms-transform: scale(0.7);
+             transform: scale(0.7);
+     }
+     70% {
+         -webkit-transform: scale(1);
+             -ms-transform: scale(1);
+                 transform: scale(1);
+     }
+     100% {
+         -webkit-transform: scale(0.7);
+             -ms-transform: scale(0.7);
+                 transform: scale(0.7);
+     }`;
+
+    const pulseLG = keyframes`
+    0% {
+     -webkit-transform: scale(0.5);
+         -ms-transform: scale(0.5);
+             transform: scale(0.5);
+     }
+     70% {
+         -webkit-transform: scale(1);
+             -ms-transform: scale(1);
+                 transform: scale(1);
+     }
+     100% {
+         -webkit-transform: scale(0.5);
+             -ms-transform: scale(0.5);
+                 transform: scale(0.5);
+     }`;
+
     const noAnim = keyframes``;
 
     return {
@@ -200,6 +280,11 @@ export const allAnims = (props: AllAnimsProps) => {
         fwdy918,
         fwdy1827,
         fwdy2736,
+        floatX,
+        floatShadow,
+        pulseSM,
+        pulseMD,
+        pulseLG,
         noAnim
     };
 };

@@ -5,23 +5,12 @@ The program does the leg work with regard to calculating translationZ depth and 
 
 ## Deployment
 
-Install sequence
-
-```
-git clone https://github.com/mdnelles/anim-3d-objs.git
-npm i
-npm run start
-```
+`npm i anim-3d-obj` https://www.npmjs.com/package/anim-3d-obj
 
 ## Examples
 
-All sided simple https://codesandbox.io/s/anim-3d-obj-all-sides-simple-sdy1q0
-
-Two sided simple https://codesandbox.io/s/anim-3d-obj-2-sides-simple-9wognm
-
-90 degree wobble on X axis https://codesandbox.io/s/anim-3d-obj-wobblex-08mxqe
-
-speed wobble(y) 3 sides https://codesandbox.io/s/anim-3d-obj-3-sides-wobble-y-axis-dceqdp
+All sided simple https://codesandbox.io/s/anim-3d-obj-all-sides-simple-sdy1q0 Two sided simple https://codesandbox.io/s/anim-3d-obj-2-sides-simple-9wognm 90 degree wobble on X axis
+https://codesandbox.io/s/anim-3d-obj-wobblex-08mxqe speed wobble(y) 3 sides https://codesandbox.io/s/anim-3d-obj-3-sides-wobble-y-axis-dceqdp
 
 ## Authors
 
@@ -32,49 +21,48 @@ speed wobble(y) 3 sides https://codesandbox.io/s/anim-3d-obj-3-sides-wobble-y-ax
 The following code
 
 ```
-const indivStyles: object = {
+const global: object = {
       // // face individual styles (over rides global)
-      bottom: {
-         bfv: "visible",
-         fontFamily: "Helvetica",
-      },
-      front: {
-         border: "1px solid #f00",
-         bgc: "#f00",
-         bfv: "visible",
-         fontFamily: "Arial, Sans",
-      },
-      left: {
-         bgc: "yellow",
-      },
-      top: {
-         bgc: "pink",
-      },
-      right: {
-         bgc: "purple",
-      },
-      back: {
-         border: "1px solid #f00",
-         bgc: "#0f0",
-         bfv: "visible",
-         fontFamily: "Arial, Sans",
-      },
+      css: `
+         border: 1px solid #00f;
+         background-color: black;
+         color:white;
+         opacity: 0.7;
+         backface-visibility: visible;
+         font-family: Arial, Helvetica, sans-serif;
+         `,
+      body: "Hi I am global",
    };
+   ...
+   front: {
+         css: `
+         border: 1px solid #00f;
+         background-color: red;
+         opacity: 0.7;
+         color:white;
+         fontFace:sans;
+         backface-visibility: visible;
+         font-family: Arial, Helvetica, sans-serif;
+         fontFamily: Cochin;
+
+         `,
+         body: "BOTTOM",
+      },
 ```
 
 and
 
 ```
          <Cuboid
-            width={260}
-            depth={260}
-            height={92}
+            width={300}
+            height={200}
+            depth={100}
             perspectiveOrigin='50% 50%'
             zIndex={10}
             animSpecs={animSpecs}
-            indivStyles={indivStyles}
+            custom={custom}
             faces={faceprops}
-            globalStyles={globalStyles}
+            global={global}
          >
             {}
          </Cuboid>
@@ -107,4 +95,4 @@ will produce the following
 
 ## keywords
 
-React CSS style animation cube cuboid 3d
+React CSS style animation cube cuboid 3D webGL

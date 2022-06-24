@@ -38,11 +38,9 @@ const Face = (props: FaceProps): any => {
         transform = `transform: rotateY(90deg) translateZ(${tranz}px);`;
     } else {
         if (height > width && !depth) {
-            console.log(1);
             tranz = -(+height / 2 - +width);
             width = +height;
         } else if (width > height && !depth) {
-            console.log(2);
             tranz = +height / 2;
             height = +width;
         } else {

@@ -5,8 +5,8 @@
         "url": "https://github.com/mdnelles/Component-Libraryt"
     },
     "homepage": "https://github.com/mdnelles/anim-3d-objs-launchers",
-    "version": "1.0.19",
-    "description": "A component library for getting people started with easy to re-use components for everyday projects.",
+    "version": "1.1.3",
+    "description": "React library for creating 3D objects on the fly.  Also these objects can be animated",
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "files": [
@@ -42,6 +42,7 @@
         "animation",
         "cube",
         "cuboid",
-        "3d"
+        "3d",
+        "webGL"
     ]
 }

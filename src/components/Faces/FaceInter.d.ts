@@ -11,7 +11,7 @@ export interface FaceProps {
     width?: number | string;
 }
 
-export interface CuboidProps {
+export interface ObjProps {
     animSpecs?:
         | {
               anim1?: string | undefined;
@@ -44,6 +44,7 @@ export interface CuboidProps {
 
     height?: number | string;
     custom?: object | string | undefined;
+    perspective?: string | number | undefined;
     perspectiveOrigin?: string | undefined;
     tranz?: number | undefined;
     txt?: string | any;
