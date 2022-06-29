@@ -1,11 +1,16 @@
 export interface AnimStylesProps {
-    duration?: number | string;
-    iterationCount?: number | string;
-    animName?: string;
-    fillMode?: string;
     children?: any;
-    borderColor?: string;
-    animLow?: number | undefined;
-    animHi?: number | undefined;
-    animDirection?: string | undefined;
+    animSpecs?: any;
+}
+export interface AnimSpecsProps {
+    border?: string | undefined;
+    degreesHi?: number | undefined;
+    degreesLow?: number | undefined;
+    delay: any;
+    direction?: string | undefined;
+    duration?: number | string | undefined;
+    fillMode?: string | undefined;
+    iterationCount?: number | string | undefined;
+    name?: string | undefined;
+    timing?: string | undefined;
 }

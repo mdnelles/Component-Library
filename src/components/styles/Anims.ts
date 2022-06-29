@@ -1,12 +1,12 @@
 import { keyframes } from 'styled-components';
 
 interface AllAnimsProps {
-    animLow?: number;
-    animHi?: number;
+    degreesLow?: number;
+    degreesHi?: number;
 }
 
 export const allAnims = (props: AllAnimsProps) => {
-    const { animLow = 0, animHi = 0 } = props;
+    const { degreesLow = 0, degreesHi = 0 } = props;
 
     const X360 = keyframes`
    from {
@@ -40,30 +40,30 @@ export const allAnims = (props: AllAnimsProps) => {
 
     const wobY = keyframes`
     0% {
-        -webkit-transform: rotateY(${animLow}deg);
-        transform: rotateY(${animLow}deg);
+        -webkit-transform: rotateY(${degreesLow}deg);
+        transform: rotateY(${degreesLow}deg);
     }
     50% {
-        -webkit-transform: rotateY(${animHi}deg);
-        transform: rotateY(${animHi}deg);
+        -webkit-transform: rotateY(${degreesHi}deg);
+        transform: rotateY(${degreesHi}deg);
     }
     100% {
-        -webkit-transform: rotateY(${animLow}deg);
-        transform: rotateY(${animLow}deg);
+        -webkit-transform: rotateY(${degreesLow}deg);
+        transform: rotateY(${degreesLow}deg);
     }`;
 
     const wobX = keyframes`
     0% {
-        -webkit-transform: rotateX(${animLow}deg);
-        transform: rotateX(${animLow}deg);
+        -webkit-transform: rotateX(${degreesLow}deg);
+        transform: rotateX(${degreesLow}deg);
     }
     50% {
-        -webkit-transform: rotateX(${animHi}deg);
-        transform: rotateX(${animHi}deg);
+        -webkit-transform: rotateX(${degreesHi}deg);
+        transform: rotateX(${degreesHi}deg);
     }
     100% {
-        -webkit-transform: rotateX(${animLow}deg);
-        transform: rotateX(${animLow}deg);
+        -webkit-transform: rotateX(${degreesLow}deg);
+        transform: rotateX(${degreesLow}deg);
     }`;
     /* ============================== x-axis 0-180 >180 - 360 */
     const fwdx018 = keyframes`

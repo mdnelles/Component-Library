@@ -5,11 +5,11 @@ import { ObjProps } from './Faces/FaceInter';
 import Face from './Faces/Face';
 import { ObjWrapper } from './styles/Global';
 
-export const Card = (props: ObjProps): any => {
-    let { anim1Specs, anim2Specs, width = 5, height = 5, faces, global = {}, custom = {}, tranz = (+height / 2) | 0, perspective, perspectiveOrigin, zIndex } = props;
+export const Ribbon = (props: ObjProps): any => {
+    let { anim1Specs, anim2Specs, width = 5, height = 5, depth = 5, faces, global = {}, custom = {}, tranz = (+height / 2) | 0, perspective, perspectiveOrigin, zIndex } = props;
 
     const buildFace = (faceType: any): any => {
-        return <Face width={width} height={height} depth={0.1} faceType={faceType} id={faceType} tranz={tranz} global={global} custom={custom} />;
+        return <Face width={width} height={height} depth={depth} faceType={faceType} id={faceType} tranz={tranz} global={global} custom={custom} />;
     };
 
     return (
@@ -17,8 +17,9 @@ export const Card = (props: ObjProps): any => {
             <AnimWrap animSpecs={anim1Specs}>
                 <AnimWrap animSpecs={anim2Specs}>
                     <ObjWrapper>
-                        {!!faces && !!faces.front ? buildFace('front') : null}
+                        {!!faces && !!faces.bottom ? buildFace('bottom') : null}
                         {!!faces && !!faces.back ? buildFace('back') : null}
+                        {!!faces && !!faces.top ? buildFace('topr') : null}
                     </ObjWrapper>
                 </AnimWrap>
             </AnimWrap>

@@ -12,22 +12,8 @@ export interface FaceProps {
 }
 
 export interface ObjProps {
-    animSpecs?:
-        | {
-              anim1?: string | undefined;
-              anim1duration?: string | undefined;
-              anim1low?: number | undefined; // rotation degrees
-              anim1hi?: number | undefined; // rotation degrees
-              anim1count?: number | string | undefined;
-              anim2?: string | undefined;
-              anim2duration?: string | undefined;
-              anim2hi?: number | undefined; // rotation degrees
-              anim2low?: number | undefined; // rotation degrees
-              anim2count?: number | string | undefined;
-              anim1direction?: string | undefined;
-              anim2direction?: string | undefined;
-          }
-        | undefined;
+    anim1Specs?: object | undefined;
+    anim2Specs?: object | undefined;
     children: any;
     depth?: number;
     global?: { border?: string; bgc?: string; opac?: number | string } | any;
