@@ -1,11 +1,10 @@
 import React from 'react';
 import { AnimWrap } from './styles/AnimWrap';
 import { SceneStyle } from './styles/Scene';
-import { ObjProps } from './Faces/FaceInter';
 import Face from './Faces/Face';
 import { ObjWrapper } from './styles/Global';
 
-export const Cuboid = (props: ObjProps): any => {
+export const Ribbon = (props) => {
     let {
         anim1Specs = {},
         anim2Specs = {},
@@ -28,7 +27,7 @@ export const Cuboid = (props: ObjProps): any => {
         zIndex = 10
     } = props;
 
-    const buildFace = (faceType: any): any => {
+    const buildFace = (faceType) => {
         return <Face width={width} height={height} depth={depth} faceType={faceType} id={faceType} tranz={tranz} global={global} custom={custom} />;
     };
 
@@ -37,12 +36,9 @@ export const Cuboid = (props: ObjProps): any => {
             <AnimWrap animSpecs={anim1Specs}>
                 <AnimWrap animSpecs={anim2Specs}>
                     <ObjWrapper>
-                        {!!faces && !!faces.front ? buildFace('front') : null}
-                        {!!faces && !!faces.right ? buildFace('right') : null}
-                        {!!faces && !!faces.back ? buildFace('back') : null}
-                        {!!faces && !!faces.left ? buildFace('left') : null}
-                        {!!faces && !!faces.top ? buildFace('top') : null}
                         {!!faces && !!faces.bottom ? buildFace('bottom') : null}
+                        {!!faces && !!faces.back ? buildFace('back') : null}
+                        {!!faces && !!faces.top ? buildFace('topr') : null}
                     </ObjWrapper>
                 </AnimWrap>
             </AnimWrap>

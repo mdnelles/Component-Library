@@ -1,11 +1,6 @@
 import { keyframes } from 'styled-components';
 
-interface AllAnimsProps {
-    degreesLow?: number;
-    degreesHi?: number;
-}
-
-export const allAnims = (props: AllAnimsProps) => {
+export const allAnims = (props) => {
     const { degreesLow = 0, degreesHi = 0 } = props;
 
     const X360 = keyframes`
