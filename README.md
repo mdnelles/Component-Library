@@ -27,7 +27,7 @@ const anim1Specs: object = {
     delay: 0, // start delay in seconds
     direction: 'normal', //normal alternating reverse
     duration: 8, // seconds
-    fillMode: 'forward', // node forward backward both
+    fillMode: 'forwards', // node forwards backwards both
     iterationCount: 'infinite', // number or infinte
     name: 'Y360', // ** ANIMATIONS
     timing: 'ease-in-out' // linear ease ease-in-out

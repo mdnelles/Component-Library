@@ -2,13 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 import { FaceProps } from './FaceInter';
 
-const Face = (props: FaceProps): any => {
+const Face = (props: FaceProps): JSX.Element => {
     let { depth = 10, faceType, global = {}, height = 10, custom = false, tranz = 80, width = 100 } = props;
 
     let transform;
-    const styles = !!custom[faceType] && !!custom[faceType].css ? custom[faceType].css : global.css;
+    let styles = !!custom[faceType] && !!custom[faceType].css ? custom[faceType].css : global.css;
     const body = !!custom[faceType] && !!custom[faceType].body ? custom[faceType].body : global.body;
-
     if (faceType === 'bottom') {
         tranz = +height - +depth / 2;
         height = +depth;
@@ -36,6 +35,11 @@ const Face = (props: FaceProps): any => {
             width = +depth;
         }
         transform = `transform: rotateY(90deg) translateZ(${tranz}px);`;
+        // topr is to of Ribbon which points back
+    } else if (faceType === 'topr') {
+        height = +depth;
+        if (!!depth) tranz = +depth / 2;
+        transform = `transform: rotateX(90deg) translateZ(${tranz}px );  `;
     } else {
         if (height > width && !depth) {
             tranz = -(+height / 2 - +width);
@@ -50,13 +54,14 @@ const Face = (props: FaceProps): any => {
         transform = `transform: rotateY(-90deg) translateZ(${tranz}px);`;
     }
 
-    const Specs: any = styled.div`
+    const Specs: any = styled.section`
         ${styles}
         width: ${width}px;
         position: absolute;
         height: ${height}px;
         ${transform};
     `;
+
     return <Specs>{body}</Specs>;
 };
 

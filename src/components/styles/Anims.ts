@@ -1,26 +1,26 @@
-import { keyframes } from 'styled-components';
+import { keyframes } from "styled-components";
 
 interface AllAnimsProps {
-    degreesLow?: number;
-    degreesHi?: number;
+   degreesLow?: number;
+   degreesHi?: number;
 }
 
 export const allAnims = (props: AllAnimsProps) => {
-    const { degreesLow = 0, degreesHi = 0 } = props;
+   const { degreesLow = 0, degreesHi = 0 } = props;
 
-    const X360 = keyframes`
+   const X360 = keyframes`
    from {
-      -webkit-transform: rotateX(360deg);
-      transform: rotateX(360deg);
-   }
-   to {
-      -webkit-transform: rotateX(0deg);
-      transform: rotateX(0deg);
-   }
-}`;
+            -webkit-transform: rotateX(360deg);
+            transform: rotateX(360deg);
+        }
+        to {
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+        }
+    }`;
 
-    //////// Y360
-    const Y360 = keyframes`
+   //////// Y360
+   const Y360 = keyframes`
     from {
         -webkit-transform: rotateY(360deg);
         transform: rotateY(360deg);
@@ -30,7 +30,7 @@ export const allAnims = (props: AllAnimsProps) => {
         transform: rotateY(0deg);
     }`;
 
-    const fadeInkf = keyframes`
+   const fadeInkf = keyframes`
     from {
         opacity: 0;
     }
@@ -38,7 +38,7 @@ export const allAnims = (props: AllAnimsProps) => {
         opacity: 1;
     }`;
 
-    const wobY = keyframes`
+   const wobY = keyframes`
     0% {
         -webkit-transform: rotateY(${degreesLow}deg);
         transform: rotateY(${degreesLow}deg);
@@ -52,7 +52,7 @@ export const allAnims = (props: AllAnimsProps) => {
         transform: rotateY(${degreesLow}deg);
     }`;
 
-    const wobX = keyframes`
+   const wobX = keyframes`
     0% {
         -webkit-transform: rotateX(${degreesLow}deg);
         transform: rotateX(${degreesLow}deg);
@@ -65,8 +65,8 @@ export const allAnims = (props: AllAnimsProps) => {
         -webkit-transform: rotateX(${degreesLow}deg);
         transform: rotateX(${degreesLow}deg);
     }`;
-    /* ============================== x-axis 0-180 >180 - 360 */
-    const fwdx018 = keyframes`
+   /* ============================== x-axis 0-180 >180 - 360 */
+   const fwdx018 = keyframes`
     from {
         -webkit-transform: rotateX(360deg);
         transform: rotateX(360deg);
@@ -75,7 +75,7 @@ export const allAnims = (props: AllAnimsProps) => {
         -webkit-transform: rotateX(180deg);
         transform: rotateX(180deg);
     }`;
-    const fwdx1836 = keyframes`
+   const fwdx1836 = keyframes`
     from {
         -webkit-transform: rotateX(180deg);
         transform: rotateX(180deg);
@@ -84,8 +84,8 @@ export const allAnims = (props: AllAnimsProps) => {
         -webkit-transform: rotateX(0deg);
         transform: rotateX(0deg);
     }`;
-    /* ============================= x-axis 0-90, 90-180, 180-270, 270-360 */
-    const fwdx09 = keyframes`
+   /* ============================= x-axis 0-90, 90-180, 180-270, 270-360 */
+   const fwdx09 = keyframes`
     from {
        -webkit-transform: rotateX(360deg);
        transform: rotateX(360deg);
@@ -94,7 +94,7 @@ export const allAnims = (props: AllAnimsProps) => {
        -webkit-transform: rotateX(90deg);
        transform: rotateX(90deg);
     }`;
-    const fwdx918 = keyframes`
+   const fwdx918 = keyframes`
     from {
         -webkit-transform: rotateX(-90deg);
         transform: rotateX(-90deg);
@@ -103,7 +103,7 @@ export const allAnims = (props: AllAnimsProps) => {
         -webkit-transform: rotateX(-180deg);
         transform: rotateX(-180deg);
     }`;
-    const fwdx1827 = keyframes`
+   const fwdx1827 = keyframes`
     from {
         -webkit-transform: rotateX(-180deg);
         transform: rotateX(-180deg);
@@ -112,7 +112,7 @@ export const allAnims = (props: AllAnimsProps) => {
         -webkit-transform: rotateX(-270deg);
         transform: rotateX(-270deg);
     }`;
-    const fwdx2736 = keyframes`
+   const fwdx2736 = keyframes`
     from {
         -webkit-transform: rotateX(-270deg);
         transform: rotateX(-270deg);
@@ -122,8 +122,8 @@ export const allAnims = (props: AllAnimsProps) => {
         transform: rotateX(-360deg);
     }`;
 
-    /* ============================== y-axis 0-180 >180 - 360 */
-    const fwdy018 = keyframes`
+   /* ============================== y-axis 0-180 >180 - 360 */
+   const fwdy018 = keyframes`
    from {
        -webkit-transform: rotateY(360deg);
        transform: rotateY(360deg);
@@ -132,7 +132,7 @@ export const allAnims = (props: AllAnimsProps) => {
        -webkit-transform: rotateY(180deg);
        transform: rotateY(180deg);
    }`;
-    const fwdy1836 = keyframes`
+   const fwdy1836 = keyframes`
    from {
        -webkit-transform: rotateY(180deg);
        transform: rotateY(180deg);
@@ -142,8 +142,8 @@ export const allAnims = (props: AllAnimsProps) => {
        transform: rotateY(0deg);
    }`;
 
-    /* ============================= y-axis 0-90, 90-180, 180-270, 270-360 */
-    const fwdy09 = keyframes`
+   /* ============================= y-axis 0-90, 90-180, 180-270, 270-360 */
+   const fwdy09 = keyframes`
    from {
       -webkit-transform: rotateY(360deg);
       transform: rotateY(360deg);
@@ -152,7 +152,7 @@ export const allAnims = (props: AllAnimsProps) => {
       -webkit-transform: rotateY(90deg);
       transform: rotateY(90deg);
    }`;
-    const fwdy918 = keyframes`
+   const fwdy918 = keyframes`
    from {
        -webkit-transform: rotateY(-90deg);
        transform: rotateY(-90deg);
@@ -161,7 +161,7 @@ export const allAnims = (props: AllAnimsProps) => {
        -webkit-transform: rotateY(-180deg);
        transform: rotateY(-180deg);
    }`;
-    const fwdy1827 = keyframes`
+   const fwdy1827 = keyframes`
    from {
        -webkit-transform: rotateY(-180deg);
        transform: rotateY(-180deg);
@@ -170,7 +170,7 @@ export const allAnims = (props: AllAnimsProps) => {
        -webkit-transform: rotateY(-270deg);
        transform: rotateY(-270deg);
    }`;
-    const fwdy2736 = keyframes`
+   const fwdy2736 = keyframes`
    from {
        -webkit-transform: rotateY(-270deg);
        transform: rotateY(-270deg);
@@ -180,13 +180,13 @@ export const allAnims = (props: AllAnimsProps) => {
        transform: rotateY(-360deg);
    }`;
 
-    /* ============================= floating */
-    const floatX = keyframes`
+   /* ============================= floating */
+   const floatX = keyframes`
    0% { -webkit-transform: translate(0,  0px); -ms-transform: translate(0,  0px); transform: translate(0,  0px); }
    50%  { -webkit-transform: translate(0, 15px); -ms-transform: translate(0, 15px); transform: translate(0, 15px); }
    100%   { -webkit-transform: translate(0, -0px); -ms-transform: translate(0, -0px); transform: translate(0, -0px); }`;
 
-    const floatShadow = keyframes`
+   const floatShadow = keyframes`
         0% {
             -webkit-box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
                     box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -209,7 +209,7 @@ export const allAnims = (props: AllAnimsProps) => {
                     transform: translateY(0px);
         }`;
 
-    const pulseSM = keyframes`
+   const pulseSM = keyframes`
    0% {
     -webkit-transform: scale(0.9);
         -ms-transform: scale(0.9);
@@ -226,7 +226,7 @@ export const allAnims = (props: AllAnimsProps) => {
                 transform: scale(0.9);
     }`;
 
-    const pulseMD = keyframes`
+   const pulseMD = keyframes`
     0% {
      -webkit-transform: scale(0.7);
          -ms-transform: scale(0.7);
@@ -243,7 +243,7 @@ export const allAnims = (props: AllAnimsProps) => {
                  transform: scale(0.7);
      }`;
 
-    const pulseLG = keyframes`
+   const pulseLG = keyframes`
     0% {
      -webkit-transform: scale(0.5);
          -ms-transform: scale(0.5);
@@ -260,31 +260,31 @@ export const allAnims = (props: AllAnimsProps) => {
                  transform: scale(0.5);
      }`;
 
-    const noAnim = keyframes``;
+   const noAnim = keyframes``;
 
-    return {
-        X360,
-        Y360,
-        fadeInkf,
-        wobY,
-        wobX,
-        fwdx018,
-        fwdx1836,
-        fwdx09,
-        fwdx918,
-        fwdx1827,
-        fwdx2736,
-        fwdy018,
-        fwdy1836,
-        fwdy09,
-        fwdy918,
-        fwdy1827,
-        fwdy2736,
-        floatX,
-        floatShadow,
-        pulseSM,
-        pulseMD,
-        pulseLG,
-        noAnim
-    };
+   return {
+      X360,
+      Y360,
+      fadeInkf,
+      wobY,
+      wobX,
+      fwdx018,
+      fwdx1836,
+      fwdx09,
+      fwdx918,
+      fwdx1827,
+      fwdx2736,
+      fwdy018,
+      fwdy1836,
+      fwdy09,
+      fwdy918,
+      fwdy1827,
+      fwdy2736,
+      floatX,
+      floatShadow,
+      pulseSM,
+      pulseMD,
+      pulseLG,
+      noAnim,
+   };
 };
