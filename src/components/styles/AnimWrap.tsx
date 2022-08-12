@@ -1,9 +1,11 @@
 import styled from 'styled-components';
+import React from 'react';
+import { AnimStylesProps } from './Anim';
 import { allAnims } from './Anims';
 
-export const AnimWrap = (props) => {
+export const AnimWrap = (props: AnimStylesProps) => {
     const { children, animSpecs } = props;
-    const AS = animSpecs;
+    const AS: any = animSpecs;
 
     const {
         X360,
@@ -31,7 +33,7 @@ export const AnimWrap = (props) => {
         noAnim
     } = allAnims({ degreesHi: AS.degreesHi, degreesLow: AS.degreesLow });
 
-    let theAnim = 'noAnim';
+    let theAnim: any = 'noAnim';
     // need to iterate through all animation posibilities and not use eval() to satisfy TS
     if (AS.name === 'X360') theAnim = X360;
     else if (AS.name === 'Y360') theAnim = Y360;
@@ -57,7 +59,7 @@ export const AnimWrap = (props) => {
     else if (AS.name === 'pulseLG') theAnim = pulseLG;
     else theAnim = noAnim;
 
-    const AnimWrapDiv = styled.div`
+    const AnimWrapDiv: any = styled.div`
         width: 100%;
         height: 100%;
         position: relative;

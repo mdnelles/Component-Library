@@ -1,18 +1,23 @@
 import { keyframes } from 'styled-components';
 
-export const allAnims = (props) => {
+interface AllAnimsProps {
+    degreesLow?: number;
+    degreesHi?: number;
+}
+
+export const allAnims = (props: AllAnimsProps) => {
     const { degreesLow = 0, degreesHi = 0 } = props;
 
     const X360 = keyframes`
    from {
-            -webkit-transform: rotateX(360deg);
-            transform: rotateX(360deg);
-        }
-        to {
-            -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-        }
-    }`;
+      -webkit-transform: rotateX(360deg);
+      transform: rotateX(360deg);
+   }
+   to {
+      -webkit-transform: rotateX(0deg);
+      transform: rotateX(0deg);
+   }
+}`;
 
     //////// Y360
     const Y360 = keyframes`
